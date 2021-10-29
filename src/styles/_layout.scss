@@ -1,0 +1,21 @@
+.layout{
+	height: 100vh;
+	width: 100vw;
+
+	display: flex;
+	flex-direction: column;
+
+	&__nav{
+		background-color: $primary-color;
+		height: 10vh;
+	}
+
+	&__main{
+		flex: 1;
+	}
+
+	&__footer{
+		background-color: $secondary-color;
+		height: 10vh;
+	}
+}
