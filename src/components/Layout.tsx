@@ -10,11 +10,13 @@ const Layout: React.FC<LayoutProps> = ({
 }) => {
   return (
     <div className={ROOT_CLASSNAME}>
-      {enableNavigation && (
-        <nav className={`${ROOT_CLASSNAME}__nav`}>persistent nav bar</nav>
-      )}
+      <header className={`${ROOT_CLASSNAME}__header`}>
+        header
+        {enableNavigation && (
+          <nav className={`${ROOT_CLASSNAME}__nav`}>nav</nav>
+        )}
+      </header>
       <main className={`${ROOT_CLASSNAME}__main`}>{children}</main>
-      <footer className={`${ROOT_CLASSNAME}__footer`}>persistent footer</footer>
     </div>
   );
 };
