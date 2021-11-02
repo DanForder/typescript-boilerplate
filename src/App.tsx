@@ -4,8 +4,8 @@ import {
   Route,
   Switch,
 } from "react-router-dom";
-import HomeScreen from "./screens/HomeScreen";
-import NotFoundScreen from "./screens/NotFoundScreen";
+import HomeScreen from "./views/HomeScreen";
+import NotFoundScreen from "./views/NotFoundScreen";
 import "./styles/main.scss";
 
 const App = () => {

@@ -3,40 +3,61 @@
 // em would be relative to its parent's font-size
 
 * {
-  font-family: "Trebuchet MS", Arial, sans-serif;
-  font-size: 1rem;
+  font-family: "Bitter", serif;
+  font-size: 1.25rem;
 }
 
-body {
+h1,
+h2,
+h3 {
+  margin: 0.5rem 0;
+}
+
+h1 {
+  font-family: "Work Sans", sans-serif;
+  font-size: 2.5625rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.625rem;
+}
+
+@media screen and (min-width: $tablet-breakpoint) {
+  * {
+    font-size: 1.3rem;
+  }
+
   h1 {
-    font-size: 2rem;
+    font-size: 2.6rem;
   }
 
   h2 {
-    font-size: 1.625rem;
+    font-size: 2.05rem;
   }
 
   h3 {
-    font-size: 1.25rem;
+    font-size: 1.65rem;
   }
 }
 
-@media screen and (min-width: $desktop-breakpoint) {
+@media screen and (min-width: $large-desktop-breakpoint) {
   * {
-    font-size: 1.25rem;
+    font-size: 1.4rem;
   }
 
-  body {
-    h1 {
-      font-size: 2.5rem;
-    }
+  h1 {
+    font-size: 2.75rem;
+  }
 
-    h2 {
-      font-size: 2rem;
-    }
+  h2 {
+    font-size: 2.25rem;
+  }
 
-    h3 {
-      font-size: 1.625rem;
-    }
+  h3 {
+    font-size: 1.75rem;
   }
 }

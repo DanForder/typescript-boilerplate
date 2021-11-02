@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HomeScreen Renders 1`] = `
+<div>
+  <div
+    class="layout"
+  >
+    <main
+      class="layout__main"
+    >
+      <h1>
+        Home
+      </h1>
+    </main>
+  </div>
+</div>
+`;

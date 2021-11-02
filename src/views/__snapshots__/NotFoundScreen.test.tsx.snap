@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NotFoundScreen Renders 1`] = `
+<div>
+  <div
+    class="layout"
+  >
+    <main
+      class="layout__main"
+    >
+      <h1>
+        Error 
+        404
+         - Not Found!
+      </h1>
+      <a
+        href="/"
+      >
+        Go Home
+      </a>
+    </main>
+  </div>
+</div>
+`;

@@ -1,5 +1,6 @@
 export enum ErrorCode {
-  BadRequest = "400",
-  NotFound = "404",
-  InternalServerError = "500",
+  BAD_REQUEST = "400",
+  NOT_FOUND = "404",
+  INTERNAL_SERVER_ERROR = "500",
+  OTHER = "600",
 }

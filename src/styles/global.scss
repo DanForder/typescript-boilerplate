@@ -1,8 +1,12 @@
 * {
-  color: whitesmoke;
+  color: $text-color;
 }
 
 a,
 button {
-  color: cadetblue;
+  color: $primary-color;
+
+  &:hover {
+    color: darken($primary-color, 10%);
+  }
 }

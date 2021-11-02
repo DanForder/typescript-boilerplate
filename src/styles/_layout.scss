@@ -4,7 +4,15 @@
   background-color: #2c2a30;
 
   &__main {
-    padding: 1rem 2rem;
+    padding: 1rem;
+  }
+}
+
+@media screen and (min-width: $tablet-breakpoint) {
+  .layout {
+    &__main {
+      padding: 2rem;
+    }
   }
 }
 
