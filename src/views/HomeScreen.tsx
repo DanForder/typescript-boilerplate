@@ -12,8 +12,6 @@ export const HomeScreen = () => {
         maxime tempora, temporibus beatae voluptas repellat rerum. Dignissimos,
         necessitatibus.
       </p>
-      <button>button</button>
-      <a href="/">link</a>
     </Layout>
   );
 };
