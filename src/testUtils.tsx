@@ -1,11 +1,15 @@
-import { render, RenderResult } from "@testing-library/react";
-import React from "react";
+import { render } from "@testing-library/react";
 import { BrowserRouter } from "react-router-dom";
-import App from "./App";
+
+interface CustomRenderOptions {
+  useRouting: boolean;
+}
 
 export const customRender = (
   ui: JSX.Element,
-  options = { useRouting: true }
+  options: CustomRenderOptions = {
+    useRouting: true,
+  }
 ) => {
   let uiResult = ui;
 
@@ -19,10 +23,3 @@ export const customRender = (
 const wrapWithRouting = (ui: JSX.Element): JSX.Element => {
   return <BrowserRouter>{ui}</BrowserRouter>;
 };
-
-// const AllTheProviders = ({ children }: { children: any }) => {
-//   return <BrowserRouter>{children}</BrowserRouter>;
-// };
-
-// const customRender = (ui: any, options: any) =>
-//   render(ui, { wrapper: AllTheProviders, ...options });
