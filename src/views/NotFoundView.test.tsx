@@ -1,11 +1,11 @@
 import { render } from "@testing-library/react";
-import NotFoundScreen from "./NotFoundScreen";
+import NotFoundView from "./NotFoundView";
 import { BrowserRouter } from "react-router-dom";
 import { customRender } from "../testUtils";
 
-export default describe("NotFoundScreen", () => {
+export default describe("NotFoundView", () => {
   it("Renders", () => {
-    const { container } = customRender(<NotFoundScreen />);
+    const { container } = customRender(<NotFoundView />);
 
     expect(container).toMatchSnapshot();
   });

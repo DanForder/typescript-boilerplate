@@ -1,7 +1,7 @@
 import Button from "../components/Button";
 import Layout from "../components/Layout";
 
-export const HomeScreen = () => {
+export const HomeView = () => {
   return (
     <Layout>
       <h1>Page Heading</h1>
@@ -23,4 +23,4 @@ export const HomeScreen = () => {
   );
 };
 
-export default HomeScreen;
+export default HomeView;

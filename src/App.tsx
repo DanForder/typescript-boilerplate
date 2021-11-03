@@ -4,8 +4,8 @@ import {
   Route,
   Switch,
 } from "react-router-dom";
-import HomeScreen from "./views/HomeScreen";
-import NotFoundScreen from "./views/NotFoundScreen";
+import HomeView from "./views/HomeView";
+import NotFoundView from "./views/NotFoundView";
 import "./styles/main.scss";
 
 const App = () => {
@@ -13,14 +13,13 @@ const App = () => {
     <Router>
       <Switch>
         {/* Routes here */}
-        <Route exact path="/home" component={HomeScreen} />
-        {/* <Route path="/error/:errorCode" component={ErrorScreen} /> */}
+        <Route exact path="/home" component={HomeView} />
 
         {/* Any redirects */}
         <Redirect exact path="/" to="/home" />
 
-        {/* Last is a catch-all redirect that will show an error view */}
-        <Route component={NotFoundScreen} />
+        {/* Last is a catch-all route that will show a not found view */}
+        <Route component={NotFoundView} />
       </Switch>
     </Router>
   );
