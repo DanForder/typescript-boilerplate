@@ -1,3 +1,4 @@
+import Button from "../components/Button";
 import Layout from "../components/Layout";
 
 export const HomeScreen = () => {
@@ -12,6 +13,12 @@ export const HomeScreen = () => {
         maxime tempora, temporibus beatae voluptas repellat rerum. Dignissimos,
         necessitatibus.
       </p>
+      <Button
+        label="Log to console"
+        onClick={() => {
+          console.log("button clicked");
+        }}
+      />
     </Layout>
   );
 };

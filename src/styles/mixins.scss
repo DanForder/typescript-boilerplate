@@ -1,0 +1,6 @@
+@mixin focus-outline {
+  &:focus {
+    outline: 3px $outline-color solid;
+    outline-offset: 0.2rem;
+  }
+}

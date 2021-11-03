@@ -16,7 +16,7 @@ exports[`NotFoundScreen Renders 1`] = `
       <a
         href="/"
       >
-        Go Home
+        Home
       </a>
     </main>
   </div>

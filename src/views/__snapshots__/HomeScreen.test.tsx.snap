@@ -20,6 +20,12 @@ exports[`HomeScreen Renders 1`] = `
       <p>
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non error dolor in nostrum minima odio a fuga saepe soluta adipisci perspiciatis maxime tempora, temporibus beatae voluptas repellat rerum. Dignissimos, necessitatibus.
       </p>
+      <button
+        class="button"
+        type="button"
+      >
+        Log to console
+      </button>
     </main>
   </div>
 </div>

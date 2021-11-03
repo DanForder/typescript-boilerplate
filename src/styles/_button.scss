@@ -1,0 +1,27 @@
+.button {
+  @include focus-outline;
+
+  border: none;
+  cursor: pointer;
+  background-color: $primary-color;
+  border-radius: 10px;
+  padding: 0.5rem 2rem;
+  width: 100%;
+  transition: all 0.1s ease-in-out;
+
+  &:disabled {
+    cursor: not-allowed;
+    background-color: $disabled-background-color;
+    color: $disabled-text-color;
+  }
+
+  &:hover {
+    background-color: darken($primary-color, 5%);
+  }
+}
+
+@media screen and (min-width: $tablet-breakpoint) {
+  .button {
+    width: unset;
+  }
+}

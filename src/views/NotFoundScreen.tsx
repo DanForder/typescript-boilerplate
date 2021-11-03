@@ -5,7 +5,7 @@ import { ErrorCode } from "../enums/ErrorCode";
 const NotFoundScreen = () => (
   <Layout>
     <h1>Error {ErrorCode.NOT_FOUND} - Not Found!</h1>
-    <Link to="/">Go Home</Link>
+    <Link to="/">Home</Link>
   </Layout>
 );
 

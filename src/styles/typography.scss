@@ -1,6 +1,6 @@
 // here we use rem for font-size
 // rem is relative to the :root element in the dom (html tag)
-// em would be relative to its parent's font-size
+// conversely em is relative to the parent's font-size
 
 * {
   font-family: "Bitter", serif;
@@ -9,12 +9,20 @@
 
 h1,
 h2,
-h3 {
+h3,
+p {
+  // adding display and width prevents margin collapse on our text elements
   margin: 0.5rem 0;
+  display: inline-block;
+  width: 100%;
+}
+
+h1,
+button {
+  font-family: "Work Sans", sans-serif;
 }
 
 h1 {
-  font-family: "Work Sans", sans-serif;
   font-size: 2.5625rem;
 }
 
