@@ -1,7 +1,5 @@
-import { render } from "@testing-library/react";
-import NotFoundView from "./NotFoundView";
-import { BrowserRouter } from "react-router-dom";
 import { customRender } from "../testUtils";
+import NotFoundView from "./NotFoundView";
 
 export default describe("NotFoundView", () => {
   it("Renders", () => {
