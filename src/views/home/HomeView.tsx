@@ -1,5 +1,5 @@
-import Button from "../components/Button";
-import Layout from "../components/Layout";
+import Button from "../../components/button/Button";
+import Layout from "../../components/layout/Layout";
 
 export const HomeView = () => {
   return (

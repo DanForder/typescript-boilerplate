@@ -4,9 +4,9 @@ import {
   Route,
   Switch,
 } from "react-router-dom";
-import HomeView from "./views/HomeView";
-import NotFoundView from "./views/NotFoundView";
 import "./styles/main.scss";
+import HomeView from "./views/home/HomeView";
+import NotFoundView from "./views/notFound/NotFoundView";
 
 const App = () => {
   return (

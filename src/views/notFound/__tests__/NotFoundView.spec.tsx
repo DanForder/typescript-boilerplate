@@ -1,5 +1,5 @@
-import { customRender } from "../testUtils";
-import NotFoundView from "./NotFoundView";
+import { customRender } from "../../../testUtils";
+import NotFoundView from "../NotFoundView";
 
 export default describe("NotFoundView", () => {
   it("Renders", () => {

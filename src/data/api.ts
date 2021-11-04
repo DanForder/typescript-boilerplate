@@ -1,8 +1,8 @@
 import axios, { AxiosError, AxiosResponse } from "axios";
-import UserData from "../interfaces/internal/UserData";
-import UserDataRequest from "../interfaces/server/UserDataRequest";
-import UserDataResponse from "../interfaces/server/UserDataResponse";
-import { formatName } from "../utils/NameUtils";
+import UserData from "../interfaces/internal/userData";
+import UserDataRequest from "../interfaces/server/userDataRequest";
+import UserDataResponse from "../interfaces/server/userDataResponse";
+import { formatName } from "../utils/nameUtils";
 
 export const getUser = async (userId: number): Promise<void | UserData> => {
   // request that either returns data or sets data using state management tool like redux
@@ -12,7 +12,7 @@ export const getUser = async (userId: number): Promise<void | UserData> => {
       return getUserDataFromUserDataResponse(data);
     })
     .catch((error: AxiosError) => {
-      console.error("an error occured", { error });
+      console.error("an error occurred", { error });
       //error handling
     });
 };
@@ -25,7 +25,7 @@ export const setUser = (userData: UserDataRequest) => {
       return getUserDataFromUserDataResponse(data);
     })
     .catch((error: AxiosError) => {
-      console.error("an error occured", { error });
+      console.error("an error occurred", { error });
     });
 };
 
