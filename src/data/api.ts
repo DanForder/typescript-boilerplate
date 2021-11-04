@@ -1,7 +1,7 @@
 import axios, { AxiosError, AxiosResponse } from "axios";
-import UserData from "../interfaces/internal/userData";
-import UserDataRequest from "../interfaces/server/userDataRequest";
-import UserDataResponse from "../interfaces/server/userDataResponse";
+import UserData from "../interfaces/internal/UserData";
+import UserDataRequest from "../interfaces/server/UserDataRequest";
+import UserDataResponse from "../interfaces/server/UserDataResponse";
 import { formatName } from "../utils/nameUtils";
 
 export const getUser = async (userId: number): Promise<void | UserData> => {
