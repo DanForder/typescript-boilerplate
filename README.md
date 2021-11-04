@@ -28,8 +28,36 @@ interface UserViewParameters {
 let { userId } = useParams<UserViewParameters>();
 ```
 
+## Typescript 🦾
+
+This project uses [Typescript](https://www.typescriptlang.org/) to help us out with documenting our code as we go. One of the main benefits is that we have access to [interfaces](https://www.typescriptlang.org/docs/handbook/2/objects.html). Using interfaces with our components tells us exactly which props are required in order to use that component. See below for how to create components with their own interface:
+
+```
+interface MyComponentProps {
+  requiredProp: boolean;
+  optionalProp?: string;
+}
+
+const MyComponent: React.FC<MyComponentProps> = ({
+  requiredProp,
+  optionalProp,
+}) => {
+	//your component here
+};
+```
+
+Now when want to use our example component, it will show a visual error when we don't give it the required prop.
+
 ## Testing 🧪
 
 This project uses [Jest](https://jestjs.io/) with [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/) (RTL), which both come out of the box with Create React App (CRA).
 
 All component files should have an associated test file with it. It's really important to test components _in isolation_.
+
+There is a customRender function in utils/testUtils that should be used whenever you want to do a render, which wraps the UI element in a router so you don't have to!
+
+## Code Quality 🌟
+
+This project uses [Prettier](https://prettier.io/) to help us out with formatting our code. We use most of the defaults, but we can override this in our .prettierrc file. You should install the Prettier VSCode extension, and can configure it to format on save, so all your code is automatically formatted.
+
+If you want to format all the files in the repository, use the 'format' script in the terminal.

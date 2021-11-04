@@ -1,15 +1,15 @@
-import { render } from "@testing-library/react";
+import { customRender } from "../../../utils/testUtils";
 import Layout from "../Layout";
 
 export default describe("Layout", () => {
   it("Renders without children", () => {
-    const { container } = render(<Layout />);
+    const { container } = customRender(<Layout />);
 
     expect(container).toMatchSnapshot();
   });
 
   it("Renders with children", () => {
-    const { container } = render(
+    const { container } = customRender(
       <Layout>
         <span>Child element</span>
       </Layout>
@@ -19,13 +19,13 @@ export default describe("Layout", () => {
   });
 
   it("Renders with exampleProp enabled, no children", () => {
-    const { container } = render(<Layout exampleProp />);
+    const { container } = customRender(<Layout exampleProp />);
 
     expect(container).toMatchSnapshot();
   });
 
   it("Renders with exampleProp enabled, children", () => {
-    const { container } = render(
+    const { container } = customRender(
       <Layout exampleProp>
         <span>Child element</span>
       </Layout>

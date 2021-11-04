@@ -1,4 +1,5 @@
-import { fireEvent, render, screen } from "@testing-library/react";
+import { fireEvent, screen } from "@testing-library/react";
+import { customRender } from "../../../utils/testUtils";
 import Button from "../Button";
 
 export default describe("Button", () => {
@@ -10,13 +11,13 @@ export default describe("Button", () => {
   });
 
   it("Renders", () => {
-    const { container } = render(<Button label={labelText} />);
+    const { container } = customRender(<Button label={labelText} />);
 
     expect(container).toMatchSnapshot();
   });
 
   it("Doesn't call onClick when disabled", () => {
-    render(<Button onClick={mockOnClick} label={labelText} disabled />);
+    customRender(<Button onClick={mockOnClick} label={labelText} disabled />);
 
     const button = screen.getByRole("button");
     fireEvent.click(button);
@@ -25,7 +26,7 @@ export default describe("Button", () => {
   });
 
   it("Calls onClick when enabled", () => {
-    render(<Button onClick={mockOnClick} label={labelText} />);
+    customRender(<Button onClick={mockOnClick} label={labelText} />);
 
     const button = screen.getByRole("button");
     fireEvent.click(button);

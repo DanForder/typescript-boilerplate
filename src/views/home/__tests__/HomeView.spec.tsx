@@ -1,9 +1,9 @@
-import { render } from "@testing-library/react";
+import { customRender } from "../../../utils/testUtils";
 import HomeView from "../HomeView";
 
 export default describe("HomeView", () => {
   it("Renders", () => {
-    const { container } = render(<HomeView />);
+    const { container } = customRender(<HomeView />);
 
     expect(container).toMatchSnapshot();
   });
