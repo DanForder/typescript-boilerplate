@@ -4,6 +4,7 @@ interface ButtonProps {
   onClick?: React.MouseEventHandler<HTMLButtonElement>;
   type?: "submit" | "button" | "reset";
 }
+
 const Button: React.FC<ButtonProps> = ({
   disabled,
   label,
