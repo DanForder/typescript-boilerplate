@@ -1,28 +1,18 @@
-import classname from "classnames";
-
 interface ButtonProps {
-  className?: string;
   disabled?: boolean;
   label: string;
   onClick?: React.MouseEventHandler<HTMLButtonElement>;
   type?: "submit" | "button" | "reset";
 }
-
-const ROOT_CLASSNAME = "button";
-
 const Button: React.FC<ButtonProps> = ({
-  className,
   disabled,
   label,
   onClick,
   type = "button",
 }) => {
-  //classname allows us to combine multiple classes
-  const rootClasses = classname(className, ROOT_CLASSNAME);
-
   return (
     <button
-      className={rootClasses}
+      className="button"
       disabled={disabled}
       onClick={onClick}
       type={type}
