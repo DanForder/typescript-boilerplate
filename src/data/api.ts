@@ -17,9 +17,11 @@ export const getUser = async (userId: number): Promise<void | UserData> => {
     });
 };
 
-export const setUser = (userData: UserDataRequest) => {
+export const setUser = async (
+  userData: UserDataRequest
+): Promise<void | UserData> => {
   //request that updates a user in the backend, and returns that updated user object
-  axios
+  return axios
     .post("www.example.com/user", userData)
     .then(({ data }: AxiosResponse<UserDataResponse>) => {
       return getUserDataFromUserDataResponse(data);
