@@ -1,3 +1,5 @@
+@use "./variables" as *;
+
 // here we use rem for font-size
 // rem is relative to the :root element in the dom (html tag)
 // conversely em is relative to the parent's font-size

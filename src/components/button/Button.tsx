@@ -1,4 +1,5 @@
 import classname from "classnames";
+import "./_button.scss";
 
 interface ButtonProps {
   className?: string;
