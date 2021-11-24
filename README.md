@@ -1,5 +1,10 @@
 # Typescript Example Project
 
+## Quickstart
+
+1. Install the dependencies with `npm install`
+2. Run the application with `npm start`
+
 ## File Structure 🗂️
 
 Components contains all generic components that are shared across screens. They should be generic and reusable, and be testable in isolation.
