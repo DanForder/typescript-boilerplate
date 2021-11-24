@@ -1,3 +1,6 @@
+@use "../../styles/mixins" as *;
+@use "../../styles/variables" as *;
+
 .button {
   @include focus-outline;
 

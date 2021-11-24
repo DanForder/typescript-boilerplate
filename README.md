@@ -10,7 +10,7 @@ Data contains everything to do with external requests, api calls. Everything tha
 
 [Interfaces](https://www.typescriptlang.org/docs/handbook/2/objects.html) contains both our **internal** and **server** interfaces. Internal interfaces are only used for items in our frontend, while server interfaces contain both **requests** (what we're going to send the backend) and **responses** (what we're going to receive from the backend).
 
-Styles contains our global style files that should be made available across our whole application, and our individual component styles.
+Styles contains our global style files that should be made available across our whole application. Individual component styles are kept alongside their TSX file.
 
 Utils are for handy functions that are available project-wide, these should have good descriptive names so other developers can quickly check whether the function they're looking for exists.
 

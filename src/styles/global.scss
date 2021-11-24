@@ -1,3 +1,5 @@
+@use "./variables" as *;
+
 * {
   color: $text-color;
 }
