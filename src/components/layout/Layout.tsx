@@ -1,4 +1,4 @@
-import "./_layout.scss";
+import "./Layout.scss";
 
 interface LayoutProps {
   exampleProp?: boolean;

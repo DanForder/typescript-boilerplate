@@ -1,6 +1,6 @@
 import { fireEvent, screen } from "@testing-library/react";
-import { customRender } from "../../../utils/testUtils";
-import Button from "../Button";
+import { customRender } from "../../utils/testUtils";
+import Button from "./Button";
 
 export default describe("Button", () => {
   const mockOnClick = jest.fn();

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`HomeView Renders 1`] = `
+exports[`Home Page Renders 1`] = `
 <div>
   <div
     class="layout"

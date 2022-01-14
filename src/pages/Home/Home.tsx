@@ -1,7 +1,7 @@
-import Button from "../../components/button/Button";
-import Layout from "../../components/layout/Layout";
+import Button from "../../components/Button/Button";
+import Layout from "../../components/Layout/Layout";
 
-export const HomeView = () => {
+export const Home = () => {
   return (
     <Layout>
       <h1>Page Heading</h1>
@@ -23,4 +23,4 @@ export const HomeView = () => {
   );
 };
 
-export default HomeView;
+export default Home;

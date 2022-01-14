@@ -1,5 +1,5 @@
-import { customRender } from "../../../utils/testUtils";
-import Layout from "../Layout";
+import { customRender } from "../../utils/testUtils";
+import Layout from "./Layout";
 
 export default describe("Layout", () => {
   it("Renders without children", () => {

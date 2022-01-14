@@ -23,6 +23,7 @@
   }
 }
 
+// at tablet breakpoints, button is no longer full width
 @media screen and (min-width: $tablet-breakpoint) {
   .button {
     width: unset;
