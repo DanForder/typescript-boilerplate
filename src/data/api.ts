@@ -4,12 +4,27 @@ import UserDataRequest from "../interfaces/server/UserDataRequest";
 import UserDataResponse from "../interfaces/server/UserDataResponse";
 import { formatName } from "../utils/nameUtils";
 
+const baseUrl = "https://example-user-api.herokuapp.com";
+
 export const getUser = async (userId: number): Promise<void | UserData> => {
   // request that either returns data or sets data using state management tool like redux
   return axios
-    .get(`www.example.com/user?id=${userId}`)
+    .get(`${baseUrl}/users/${userId}`)
     .then(({ data }: AxiosResponse<UserDataResponse>) => {
       return getUserDataFromUserDataResponse(data);
+    })
+    .catch((error: AxiosError) => {
+      console.error("an error occurred", { error });
+      //error handling
+    });
+};
+
+export const getUsers = async (): Promise<void | UserData[]> => {
+  // request that either returns data or sets data using state management tool like redux
+  return axios
+    .get(`${baseUrl}/users`)
+    .then(({ data }: AxiosResponse<UserDataResponse[]>) => {
+      return data.map((user) => getUserDataFromUserDataResponse(user));
     })
     .catch((error: AxiosError) => {
       console.error("an error occurred", { error });
