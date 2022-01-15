@@ -2,18 +2,20 @@
 
 // here we use rem for font-size
 // rem is relative to the :root element in the dom (html tag)
-// conversely em is relative to the parent's font-size
+// we can manipulate the :root element's font-size at different breakpoints to scale up the font-size application-wide
 
 * {
   font-family: "Bitter", serif;
-  font-size: 1.25rem;
 }
 
 h1,
 h2,
 h3,
+h4,
+h5,
+h6,
 p {
-  // adding display and width prevents margin collapse on our text elements
+  // adding display and width prevents margin collapse on these semantic text elements
   margin: 0.5rem 0;
   display: inline-block;
   width: 100%;
@@ -24,50 +26,32 @@ button {
   font-family: "Work Sans", sans-serif;
 }
 
+button {
+  font-size: 1rem;
+}
+
 h1 {
-  font-size: 2.5625rem;
+  font-size: 2.1rem;
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: 1.65rem;
 }
 
 h3 {
-  font-size: 1.625rem;
+  font-size: 1.25rem;
 }
 
 @media screen and (min-width: $tablet-breakpoint) {
-  * {
-    font-size: 1.3rem;
-  }
-
-  h1 {
-    font-size: 2.6rem;
-  }
-
-  h2 {
-    font-size: 2.05rem;
-  }
-
-  h3 {
-    font-size: 1.65rem;
+  // increases font-size of all items by 10%
+  :root {
+    font-size: 1.1rem;
   }
 }
 
-@media screen and (min-width: $large-desktop-breakpoint) {
-  * {
-    font-size: 1.4rem;
-  }
-
-  h1 {
-    font-size: 2.75rem;
-  }
-
-  h2 {
-    font-size: 2.25rem;
-  }
-
-  h3 {
-    font-size: 1.75rem;
+@media screen and (min-width: $desktop-breakpoint) {
+  // increases font-size of all items by 20%
+  :root {
+    font-size: 1.2rem;
   }
 }

@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Users Page Renders component in loading state 1`] = `
+<div>
+  <div
+    class="layout"
+  >
+    <main
+      class="layout__main"
+    >
+      <h1>
+        Users
+      </h1>
+      <span>
+        Loading...
+      </span>
+    </main>
+  </div>
+</div>
+`;

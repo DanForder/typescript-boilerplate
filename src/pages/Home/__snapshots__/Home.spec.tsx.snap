@@ -18,7 +18,10 @@ exports[`Home Page Renders 1`] = `
         Panel Heading
       </h3>
       <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non error dolor in nostrum minima odio a fuga saepe soluta adipisci perspiciatis maxime tempora, temporibus beatae voluptas repellat rerum. Dignissimos, necessitatibus.
+        Lorem ipsum dolor, paragraph text sit amet consectetur adipisicing elit. Non error dolor in nostrum minima odio a fuga saepe soluta adipisci perspiciatis maxime tempora.
+      </p>
+      <p>
+        Lorem ipsum dolor, paragraph text sit amet consectetur adipisicing elit. Non error dolor in nostrum minima odio a fuga saepe soluta adipisci perspiciatis maxime tempora.
       </p>
       <button
         class="button"

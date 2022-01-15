@@ -6,53 +6,49 @@ import { formatName } from "../utils/nameUtils";
 
 const baseUrl = "https://example-user-api.herokuapp.com";
 
-export const getUser = async (userId: number): Promise<void | UserData> => {
-  // request that either returns data or sets data using state management tool like redux
-  return axios
+// Requests a single user from the server based on their id
+export const getUser = async (userId: number): Promise<void | UserData> =>
+  axios
     .get(`${baseUrl}/users/${userId}`)
     .then(({ data }: AxiosResponse<UserDataResponse>) => {
-      return getUserDataFromUserDataResponse(data);
+      return getUserFromResponse(data);
     })
     .catch((error: AxiosError) => {
-      console.error("an error occurred", { error });
-      //error handling
+      console.error(`${error.message} in api.ts -> getUser(${userId}).\n`, {
+        error,
+      });
     });
-};
 
-export const getUsers = async (): Promise<void | UserData[]> => {
-  // request that either returns data or sets data using state management tool like redux
-  return axios
+// Requests all users from the server
+export const getUsers = async (): Promise<void | UserData[]> =>
+  axios
     .get(`${baseUrl}/users`)
     .then(({ data }: AxiosResponse<UserDataResponse[]>) => {
-      return data.map((user) => getUserDataFromUserDataResponse(user));
+      return data.map((user) => getUserFromResponse(user));
     })
     .catch((error: AxiosError) => {
-      console.error("an error occurred", { error });
-      //error handling
+      console.error(`${error.message} in api.ts -> getUsers.\n`, { error });
     });
-};
 
+// Example function that would update a user on the server
 export const setUser = async (
   userData: UserDataRequest
-): Promise<void | UserData> => {
-  //request that updates a user in the backend, and returns that updated user object
-  return axios
+): Promise<void | UserData> =>
+  axios
     .post("www.example.com/user", userData)
     .then(({ data }: AxiosResponse<UserDataResponse>) => {
-      return getUserDataFromUserDataResponse(data);
+      return getUserFromResponse(data);
     })
     .catch((error: AxiosError) => {
-      console.error("an error occurred", { error });
+      console.error(`${error.message} in api.ts -> setUser.\n`, { error });
     });
-};
 
-const getUserDataFromUserDataResponse = ({
+// Helper function to convert the server user data object to our frontend user object
+const getUserFromResponse = ({
   id,
   firstName,
   lastName,
-}: UserDataResponse) => {
-  return {
-    id,
-    fullName: formatName(firstName, lastName),
-  };
-};
+}: UserDataResponse): UserData => ({
+  id,
+  fullName: formatName(firstName, lastName),
+});
