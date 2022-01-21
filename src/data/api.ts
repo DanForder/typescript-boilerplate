@@ -1,7 +1,7 @@
 import axios, { AxiosError, AxiosResponse } from "axios";
-import UserData from "../interfaces/internal/UserData";
-import UserDataRequest from "../interfaces/server/UserDataRequest";
-import UserDataResponse from "../interfaces/server/UserDataResponse";
+import UserData from "../types/internal/UserData";
+import UserDataRequest from "../types/server/UserDataRequest";
+import UserDataResponse from "../types/server/UserDataResponse";
 import { formatName } from "../utils/nameUtils";
 
 const baseUrl = "https://example-user-api.herokuapp.com";

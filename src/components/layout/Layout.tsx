@@ -1,8 +1,8 @@
 import "./Layout.scss";
 
-interface LayoutProps {
+type LayoutProps = {
   exampleProp?: boolean;
-}
+};
 
 const ROOT_CLASSNAME = "layout";
 

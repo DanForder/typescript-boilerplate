@@ -1,9 +1,9 @@
 import { render } from "@testing-library/react";
 import { BrowserRouter } from "react-router-dom";
 
-interface CustomRenderOptions {
+type CustomRenderOptions = {
   useRouting: boolean;
-}
+};
 
 export const customRender = (
   ui: JSX.Element,

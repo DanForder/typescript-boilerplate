@@ -2,7 +2,7 @@ import { useCallback, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Layout from "../../components/Layout/Layout";
 import { getUser } from "../../data/api";
-import UserData from "../../interfaces/internal/UserData";
+import UserData from "../../types/internal/UserData";
 
 // to see this page component action, append this to your URL: "/users/1" 🧐
 // TODO: Add section in readme breaking down this component

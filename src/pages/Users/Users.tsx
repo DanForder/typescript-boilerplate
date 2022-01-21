@@ -1,7 +1,7 @@
 import { Fragment, useCallback, useEffect, useState } from "react";
 import Layout from "../../components/Layout/Layout";
 import { getUsers } from "../../data/api";
-import UserData from "../../interfaces/internal/UserData";
+import UserData from "../../types/internal/UserData";
 
 // to see this page component action, append this to your URL: "/users" 🧐
 // TODO: Add section in readme breaking down this component

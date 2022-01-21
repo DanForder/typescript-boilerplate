@@ -1,13 +1,13 @@
 import classname from "classnames";
 import "./Button.scss";
 
-interface ButtonProps {
+type ButtonProps = {
   className?: string;
   disabled?: boolean;
   label: string;
   onClick?: React.MouseEventHandler<HTMLButtonElement>;
   type?: "submit" | "button" | "reset";
-}
+};
 
 const ROOT_CLASSNAME = "button";
 
